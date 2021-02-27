@@ -491,7 +491,7 @@ module.exports = grammar({
     def: ($) =>
       seq(
         choice("def", "defp"),
-        choice($.atom, $.identifier),
+        choice($.atom, $.variable),
         optional(args($.variable)),
         optional($.guard_clause),
         $.do_block
