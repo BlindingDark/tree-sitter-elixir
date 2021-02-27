@@ -500,7 +500,7 @@ module.exports = grammar({
     do_block: ($) =>
       choice(
         seq("do", repeat($._expression), "end"),
-        seq(", do:", $._expression)
+        seq(", ", "do:", $._expression)
       ),
     lambda: ($) => seq("fn", repeat($.lambda_clause), "end"),
     lambda_clause: ($) =>
